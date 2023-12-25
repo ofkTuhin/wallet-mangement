@@ -10,28 +10,3 @@
 .container {
   @apply mx-auto max-w-[1320px] px-4;
 }
-
-// form style
-.form-input {
-  @apply w-full rounded border-transparent bg-theme-light px-6 py-4 text-dark placeholder:text-light focus:border-primary focus:ring-transparent;
-}
-
-.form-label {
-  @apply mb-4 block font-secondary text-xl font-normal text-dark;
-}
-
-// social icons
-.social-icons {
-  @apply space-x-4;
-  li {
-    @apply inline-block;
-    a {
-      @apply flex h-9 w-9 items-center justify-center rounded bg-primary text-center leading-9 text-white;
-      svg {
-        @apply h-5 w-5;
-      }
-    }
-  }
-}
-
-// notice

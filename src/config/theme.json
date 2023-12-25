@@ -5,8 +5,7 @@
         "primary": "#121212",
         "body": "#fff",
         "border": "#eaeaea",
-        "theme_light": "#f6f6f6",
-        "theme_dark": ""
+        "theme_light": "#f6f6f6"
       },
       "text_color": {
         "default": "#444444",
@@ -18,9 +17,7 @@
   "fonts": {
     "font_family": {
       "primary": "Heebo:wght@400;600",
-      "primary_type": "sans-serif",
-      "secondary": "Signika:wght@500;700",
-      "secondary_type": "sans-serif"
+      "primary_type": "sans-serif"
     },
     "font_size": { "base": "16", "scale": "1.250" }
   }
