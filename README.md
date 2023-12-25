@@ -1,3 +1,12 @@
+### Theme settings
+Therre is a json file name **theme.json** inside config folder.
+user can modify
+- font-size
+- Theme color
+- font family
+
+
+
 
 ### 📦 Dependencies
 - next 14.0+
