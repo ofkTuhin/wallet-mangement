@@ -68,16 +68,18 @@ interface WalletProviderProps {
 const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(walletReducer, initialState);
 
+  // initial load from localStorage
   useEffect(() => {
     try {
       const savedData =
         JSON.parse(localStorage.getItem("walletData")!) || initialState;
       dispatch({ type: "LOAD_DATA", payload: savedData });
     } catch (error) {
-      console.error("Error loading wallet data from localStorage:", error);
+      console.log("Error loading wallet data from localStorage:", error);
     }
   }, []);
 
+  // add note
   const addNote = (denomination: string, count: number) => {
     localStorage.setItem(
       "walletData",
@@ -93,6 +95,7 @@ const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     dispatch({ type: "ADD_NOTE", payload: { denomination, count } });
   };
 
+  // remove note
   const removeNote = (denomination: string, count: number) => {
     localStorage.setItem(
       "walletData",

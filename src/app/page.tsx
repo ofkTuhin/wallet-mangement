@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="lg:w-2/3 md:w/12 w-full mx-auto max-w-full px-4 mb-4">
+            <div className="lg:w-2/3 md:w/12 w-full mx-auto max-w-full px-4 mb-4 shadow">
               <h1 className="h4">Personal Wallet Management</h1>
               <div className="row my-2">
                 <div className="md:col-6 col-12">
@@ -41,9 +41,12 @@ const Home: React.FC = () => {
                       setNote({ ...note, denomination: e.target.value })
                     }
                   >
+                    <option value="none" selected disabled hidden>
+                      Select A note
+                    </option>
                     {state.map((item) => (
                       <option value={item.denomination} key={item.denomination}>
-                        Select Note {item.denomination}
+                        {item.denomination}
                       </option>
                     ))}
                   </select>
